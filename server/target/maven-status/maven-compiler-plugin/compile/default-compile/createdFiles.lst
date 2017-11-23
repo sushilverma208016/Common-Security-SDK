@@ -1,0 +1,15 @@
+commonsdk\server\repository\MessageRepository.class
+commonsdk\server\repository\MessageRepositoryImpl.class
+commonsdk\server\dto\AbstractDTO.class
+commonsdk\server\model\QMessage.class
+commonsdk\server\mvc\MessageController.class
+commonsdk\server\model\AbstractEntity.class
+commonsdk\server\service\MessageServiceImpl.class
+commonsdk\server\ServerApplication.class
+commonsdk\server\mapper\MessageMapperImpl.class
+commonsdk\server\mapper\MessageMapper.class
+commonsdk\server\model\Message.class
+commonsdk\server\dto\MessageDTO.class
+commonsdk\server\service\MessageService.class
+commonsdk\server\model\QAbstractEntity.class
+commonsdk\server\repository\MessageRepositoryCustom.class

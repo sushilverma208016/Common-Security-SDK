@@ -1,0 +1,15 @@
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\dto\MessageDTO.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\mapper\MessageMapper.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\repository\MessageRepository.java
+C:\Users\vsushil\Common-Security-SDK\server\target\generated-sources\java\commonsdk\server\mapper\MessageMapperImpl.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\repository\MessageRepositoryCustom.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\dto\AbstractDTO.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\model\AbstractEntity.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\service\MessageServiceImpl.java
+C:\Users\vsushil\Common-Security-SDK\server\target\generated-sources\java\commonsdk\server\model\QAbstractEntity.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\mvc\MessageController.java
+C:\Users\vsushil\Common-Security-SDK\server\target\generated-sources\java\commonsdk\server\model\QMessage.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\repository\MessageRepositoryImpl.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\model\Message.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\service\MessageService.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\ServerApplication.java
