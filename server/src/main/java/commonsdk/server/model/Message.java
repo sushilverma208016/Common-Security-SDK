@@ -9,33 +9,33 @@ public class Message extends AbstractEntity {
 
 	private static final long serialVersionUID = -6321180910534044216L;
 
-	String firstname;
+	String username;
 
-	String lastname;
+	String password;
 
-	Integer age;
+	Integer totalbalance;
 
-	public String getFirstname() {
-		return firstname;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public Integer getAge() {
-		return age;
+	public Integer getTotalbalance() {
+		return totalbalance;
 	}
 
-	public void setAge(Integer age) {
-		this.age = age;
+	public void setTotalbalance(Integer totalbalance) {
+		this.totalbalance = totalbalance;
 	}
 }
