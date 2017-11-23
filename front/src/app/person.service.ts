@@ -37,8 +37,9 @@ export class PersonService implements Resolve<Person>{
         return this.getPerson(Number(route.params['id']));
     }
 
-    deletePerson(id: number): Rx.Observable<Response> {
-        return this.http.delete(`${webServiceEndpoint}/message/${id}`).publish().refCount();
+    transferMoney(person, accounttotransfer, moneytotransfer): Rx.Observable<Response> {
+        var id= person.id;
+        return this.http.delete(`${webServiceEndpoint}/message/${id}/${accounttotransfer}/${moneytotransfer}`).publish().refCount();
     }
 
     private extractData(res: Response) {

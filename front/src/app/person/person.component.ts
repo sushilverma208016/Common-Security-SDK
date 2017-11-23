@@ -20,8 +20,8 @@ export class PersonComponent {
         this.person = route.snapshot.data['person'];
     }
 
-    transfer(person) {
-        let observable: Rx.Observable<Response> = this.personService.deletePerson(person.id);
+    transfer(person, accounttotransfer, moneytotransfer) {
+        let observable: Rx.Observable<Response> = this.personService.transferMoney(person, accounttotransfer, moneytotransfer);
         showLoading();
         observable.subscribe(doNothing, hideLoading, ()=> {
             this.router.navigate(['']);
