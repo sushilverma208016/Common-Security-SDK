@@ -1,10 +1,11 @@
 "# Common-Security-SDK" 
-For UI:
+
+#For UI:
 
 npm install -g @angular/cli
 npm install
 
-For Backend:
+#For Backend:
 
 mvn clean
 mvn spring-boot:run 
