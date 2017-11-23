@@ -64,8 +64,15 @@ public class MessageServiceImpl implements MessageService {
     @Override
     public Message tranferMoney(TransferRequestDTO transferRequestDTO) {
         List<Message> fromAccountList = messageRepository.findAll().stream().filter(msg -> msg.getAccountnumber().equals(transferRequestDTO.getFromAccount())).collect(Collectors.toList());
+
         Message fromAccount = fromAccountList.get(0);
+        final long[] id = {0};
         List<Message> toAccountList = messageRepository.findAll().stream().filter(msg -> msg.getAccountnumber().equals(transferRequestDTO.getToAccount())).collect(Collectors.toList());
+        messageRepository.findAll().forEach(msg -> {
+            if(msg.getId() > id[0]) {
+                id[0] = msg.getId();
+            }
+        });
         Message toAccount;
         if(toAccountList.size()==1) {
             toAccount = toAccountList.get(0);
@@ -77,7 +84,7 @@ public class MessageServiceImpl implements MessageService {
             newAccount.setLastaccount("");
             newAccount.setUsername(newAccount.getAccountnumber());
             newAccount.setPassword(newAccount.getAccountnumber());
-            newAccount.setId((long) Math.random());
+            newAccount.setId(id[0] + 1);
             toAccount = newAccount;
         }
         fromAccount.setTotalbalance(fromAccount.getTotalbalance() - transferRequestDTO.getAmount());
