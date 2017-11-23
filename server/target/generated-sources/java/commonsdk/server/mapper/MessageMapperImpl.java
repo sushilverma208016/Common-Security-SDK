@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2017-11-23T11:01:49+0530",
+    date = "2017-11-23T14:24:20+0530",
     comments = "version: 1.0.0.Final, compiler: javac, environment: Java 1.8.0_121 (Oracle Corporation)"
 )
 @Component
@@ -22,9 +22,9 @@ public class MessageMapperImpl implements MessageMapper {
         MessageDTO messageDTO = new MessageDTO();
 
         messageDTO.setId( message.getId() );
-        messageDTO.setFirstname( message.getFirstname() );
-        messageDTO.setLastname( message.getLastname() );
-        messageDTO.setAge( message.getAge() );
+        messageDTO.setUsername( message.getUsername() );
+        messageDTO.setPassword( message.getPassword() );
+        messageDTO.setTotalbalance( message.getTotalbalance() );
 
         return messageDTO;
     }
@@ -38,9 +38,9 @@ public class MessageMapperImpl implements MessageMapper {
         Message message_ = new Message();
 
         message_.setId( message.getId() );
-        message_.setFirstname( message.getFirstname() );
-        message_.setLastname( message.getLastname() );
-        message_.setAge( message.getAge() );
+        message_.setUsername( message.getUsername() );
+        message_.setPassword( message.getPassword() );
+        message_.setTotalbalance( message.getTotalbalance() );
 
         return message_;
     }
@@ -52,8 +52,8 @@ public class MessageMapperImpl implements MessageMapper {
         }
 
         message.setId( messageDTO.getId() );
-        message.setFirstname( messageDTO.getFirstname() );
-        message.setLastname( messageDTO.getLastname() );
-        message.setAge( messageDTO.getAge() );
+        message.setUsername( messageDTO.getUsername() );
+        message.setPassword( messageDTO.getPassword() );
+        message.setTotalbalance( messageDTO.getTotalbalance() );
     }
 }

@@ -43,12 +43,12 @@ export class PersonListComponent implements OnInit, Table<Person> {
         this.router.navigate(['person', person.id]);
     }
 
-    // delete(person) {
+    delete(person) {
 
-    //     let observable: Rx.Observable<Response> = this.personService.deletePerson(person.id);
-    //     showLoading();
-    //     observable.switchMap(() => {
-    //         return this.fetchPage(0, 10, null);
-    //     }).subscribe(doNothing, hideLoading, hideLoading);
-    // }
+        // let observable: Rx.Observable<Response> = this.personService.deletePerson(person.id);
+        // showLoading();
+        // observable.switchMap(() => {
+        //     return this.fetchPage(0, 10, null);
+        // }).subscribe(doNothing, hideLoading, hideLoading);
+    }
 }

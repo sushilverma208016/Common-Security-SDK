@@ -21,14 +21,14 @@ public class QMessage extends EntityPathBase<Message> {
 
     public final QAbstractEntity _super = new QAbstractEntity(this);
 
-    public final NumberPath<Integer> age = createNumber("age", Integer.class);
-
-    public final StringPath firstname = createString("firstname");
-
     //inherited
     public final NumberPath<Long> id = _super.id;
 
-    public final StringPath lastname = createString("lastname");
+    public final StringPath password = createString("password");
+
+    public final NumberPath<Integer> totalbalance = createNumber("totalbalance", Integer.class);
+
+    public final StringPath username = createString("username");
 
     //inherited
     public final NumberPath<Integer> version = _super.version;
