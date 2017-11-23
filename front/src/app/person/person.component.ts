@@ -24,7 +24,7 @@ export class PersonComponent {
         let observable: Rx.Observable<Response> = this.personService.transferMoney(person, accounttotransfer, moneytotransfer);
         showLoading();
         observable.subscribe(doNothing, hideLoading, ()=> {
-            this.router.navigate(['']);
+            this.router.navigate(['/person']);
             hideLoading();
         });
     }

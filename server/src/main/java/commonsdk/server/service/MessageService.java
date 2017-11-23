@@ -1,6 +1,7 @@
 package commonsdk.server.service;
 
 import commonsdk.server.dto.MessageDTO;
+import commonsdk.server.model.Message;
 
 import commonsdk.server.dto.TransferRequestDTO;
 import org.springframework.data.domain.Page;
@@ -18,5 +19,5 @@ public interface MessageService {
 
     void deleteMessage(Long id);
 
-    Integer tranferMoney(TransferRequestDTO transferRequestDTO);
+    Message tranferMoney(TransferRequestDTO transferRequestDTO);
 }

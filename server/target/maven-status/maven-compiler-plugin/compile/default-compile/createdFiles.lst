@@ -10,6 +10,7 @@ commonsdk\server\mapper\MessageMapperImpl.class
 commonsdk\server\mapper\MessageMapper.class
 commonsdk\server\model\Message.class
 commonsdk\server\dto\MessageDTO.class
+commonsdk\server\dto\TransferRequestDTO.class
 commonsdk\server\service\MessageService.class
 commonsdk\server\model\QAbstractEntity.class
 commonsdk\server\repository\MessageRepositoryCustom.class

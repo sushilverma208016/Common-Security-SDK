@@ -1,6 +1,7 @@
 package commonsdk.server.mvc;
 
 import commonsdk.server.dto.MessageDTO;
+import commonsdk.server.model.Message;
 import commonsdk.server.dto.TransferRequestDTO;
 import commonsdk.server.service.MessageService;
 import org.slf4j.Logger;
@@ -33,7 +34,7 @@ public class MessageController {
     }
 
     @RequestMapping(value = "/transfer", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Integer transferMoney(@RequestBody TransferRequestDTO transferRequestDTO) {
+    public Message transferMoney(@RequestBody TransferRequestDTO transferRequestDTO) {
         return messageService.tranferMoney(transferRequestDTO);
     }
 

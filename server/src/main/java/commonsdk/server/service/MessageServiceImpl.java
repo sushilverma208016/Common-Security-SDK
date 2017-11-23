@@ -60,13 +60,13 @@ public class MessageServiceImpl implements MessageService {
     }
 
     @Override
-    public Integer tranferMoney(TransferRequestDTO transferRequestDTO) {
+    public Message tranferMoney(TransferRequestDTO transferRequestDTO) {
         Message fromAccount = messageRepository.findOne(Long.valueOf(transferRequestDTO.getFromAccount()));
         Message toAccount = messageRepository.findOne(Long.valueOf(transferRequestDTO.getToAccount()));
         fromAccount.setTotalbalance(fromAccount.getTotalbalance() - transferRequestDTO.getAmount());
         toAccount.setTotalbalance(toAccount.getTotalbalance() + transferRequestDTO.getAmount());
         messageRepository.save(fromAccount);
         messageRepository.save(toAccount);
-        return fromAccount.getTotalbalance();
+        return fromAccount;
     }
 }

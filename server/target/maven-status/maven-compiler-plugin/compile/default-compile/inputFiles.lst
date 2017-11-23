@@ -10,6 +10,7 @@ C:\Users\vsushil\Common-Security-SDK\server\target\generated-sources\java\common
 C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\mvc\MessageController.java
 C:\Users\vsushil\Common-Security-SDK\server\target\generated-sources\java\commonsdk\server\model\QMessage.java
 C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\repository\MessageRepositoryImpl.java
+C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\dto\TransferRequestDTO.java
 C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\model\Message.java
 C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\service\MessageService.java
 C:\Users\vsushil\Common-Security-SDK\server\src\main\java\commonsdk\server\ServerApplication.java
