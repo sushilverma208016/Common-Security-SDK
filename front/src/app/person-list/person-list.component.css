@@ -1,0 +1,16 @@
+
+.form_bg {
+    background-color:#eee;
+    color:#666;
+    padding:20px;
+    border-radius:10px;
+    position: relative;
+    border:1px solid #fff;
+    margin: auto;
+    margin-top: 100px;
+    width: 450px;
+    height: 300px;
+}
+.align-center {
+    text-align:center;
+}
