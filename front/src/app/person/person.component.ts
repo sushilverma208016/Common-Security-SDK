@@ -20,7 +20,7 @@ export class PersonComponent {
         this.person = route.snapshot.data['person'];
     }
 
-    delete(person) {
+    transfer(person) {
         let observable: Rx.Observable<Response> = this.personService.deletePerson(person.id);
         showLoading();
         observable.subscribe(doNothing, hideLoading, ()=> {

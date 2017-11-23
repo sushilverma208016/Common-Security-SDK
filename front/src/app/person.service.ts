@@ -26,11 +26,11 @@ export class PersonService implements Resolve<Person>{
         let options = new RequestOptions({
             search: params
         });
-        return this.http.get(`${webServiceEndpoint}/person`, options).map(this.extractData).publish().refCount();
+        return this.http.get(`${webServiceEndpoint}/message`, options).map(this.extractData).publish().refCount();
     }
 
     getPerson(id: number): Rx.Observable<Person> {
-        return this.http.get(`${webServiceEndpoint}/person/${id}`).map(this.extractData).publish().refCount();
+        return this.http.get(`${webServiceEndpoint}/message/${id}`).map(this.extractData).publish().refCount();
     }
 
     resolve(route: ActivatedRouteSnapshot,state: RouterStateSnapshot): Rx.Observable<Person> {
@@ -38,7 +38,7 @@ export class PersonService implements Resolve<Person>{
     }
 
     deletePerson(id: number): Rx.Observable<Response> {
-        return this.http.delete(`${webServiceEndpoint}/person/${id}`).publish().refCount();
+        return this.http.delete(`${webServiceEndpoint}/message/${id}`).publish().refCount();
     }
 
     private extractData(res: Response) {
