@@ -65,6 +65,7 @@ public class MessageServiceImpl implements MessageService {
         Message toAccount = messageRepository.findOne(Long.valueOf(transferRequestDTO.getToAccount()));
         fromAccount.setTotalbalance(fromAccount.getTotalbalance() - transferRequestDTO.getAmount());
         toAccount.setTotalbalance(toAccount.getTotalbalance() + transferRequestDTO.getAmount());
+        fromAccount.setLastaccount(transferRequestDTO.getToAccount());
         messageRepository.save(fromAccount);
         messageRepository.save(toAccount);
         return fromAccount;

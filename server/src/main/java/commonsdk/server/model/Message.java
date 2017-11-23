@@ -9,11 +9,31 @@ public class Message extends AbstractEntity {
 
 	private static final long serialVersionUID = -6321180910534044216L;
 
+	String accountnumber;
+
+	String lastaccount;
+
 	String username;
 
 	String password;
 
 	Integer totalbalance;
+
+	public String getAccountnumber() {
+		return accountnumber;
+	}
+
+	public void setAccountnumber(String accountnumber) {
+		this.accountnumber = accountnumber;
+	}
+
+	public String getLastaccount() {
+		return lastaccount;
+	}
+
+	public void setLastaccount(String lastaccount) {
+		this.lastaccount = lastaccount;
+	}
 
 	public String getUsername() {
 		return username;

@@ -1,23 +1,23 @@
 package commonsdk.server.dto;
 
 public class TransferRequestDTO {
-    Integer fromAccount;
-    Integer toAccount;
+    String fromAccount;
+    String toAccount;
     Integer amount;
 
-    public Integer getFromAccount() {
+    public String getFromAccount() {
         return fromAccount;
     }
 
-    public void setFromAccount(Integer fromAccount) {
+    public void setFromAccount(String fromAccount) {
         this.fromAccount = fromAccount;
     }
 
-    public Integer getToAccount() {
+    public String getToAccount() {
         return toAccount;
     }
 
-    public void setToAccount(Integer toAccount) {
+    public void setToAccount(String toAccount) {
         this.toAccount = toAccount;
     }
 
