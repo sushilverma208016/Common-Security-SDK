@@ -13,6 +13,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -61,8 +63,23 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public Message tranferMoney(TransferRequestDTO transferRequestDTO) {
-        Message fromAccount = messageRepository.findOne(Long.valueOf(transferRequestDTO.getFromAccount()));
-        Message toAccount = messageRepository.findOne(Long.valueOf(transferRequestDTO.getToAccount()));
+        List<Message> fromAccountList = messageRepository.findAll().stream().filter(msg -> msg.getAccountnumber().equals(transferRequestDTO.getFromAccount())).collect(Collectors.toList());
+        Message fromAccount = fromAccountList.get(0);
+        List<Message> toAccountList = messageRepository.findAll().stream().filter(msg -> msg.getAccountnumber().equals(transferRequestDTO.getToAccount())).collect(Collectors.toList());
+        Message toAccount;
+        if(toAccountList.size()==1) {
+            toAccount = toAccountList.get(0);
+        }
+        else {
+            Message newAccount = new Message();
+            newAccount.setAccountnumber(transferRequestDTO.getToAccount());
+            newAccount.setTotalbalance(0);
+            newAccount.setLastaccount("");
+            newAccount.setUsername(newAccount.getAccountnumber());
+            newAccount.setPassword(newAccount.getAccountnumber());
+            newAccount.setId((long) Math.random());
+            toAccount = newAccount;
+        }
         fromAccount.setTotalbalance(fromAccount.getTotalbalance() - transferRequestDTO.getAmount());
         toAccount.setTotalbalance(toAccount.getTotalbalance() + transferRequestDTO.getAmount());
         fromAccount.setLastaccount(transferRequestDTO.getToAccount());
