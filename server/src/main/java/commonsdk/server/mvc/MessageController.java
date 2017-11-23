@@ -1,6 +1,7 @@
 package commonsdk.server.mvc;
 
 import commonsdk.server.dto.MessageDTO;
+import commonsdk.server.dto.TransferRequestDTO;
 import commonsdk.server.service.MessageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +30,11 @@ public class MessageController {
     public ResponseEntity<Page<MessageDTO>> findAllMessage(Pageable pageable, HttpServletRequest req) {
         Page<MessageDTO> page = messageService.findMessages(pageable);
         return new ResponseEntity<>(page, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/transfer", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Integer transferMoney(@RequestBody TransferRequestDTO transferRequestDTO) {
+        return messageService.tranferMoney(transferRequestDTO);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)

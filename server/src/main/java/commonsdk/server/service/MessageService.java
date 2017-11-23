@@ -2,6 +2,7 @@ package commonsdk.server.service;
 
 import commonsdk.server.dto.MessageDTO;
 
+import commonsdk.server.dto.TransferRequestDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -17,4 +18,5 @@ public interface MessageService {
 
     void deleteMessage(Long id);
 
+    Integer tranferMoney(TransferRequestDTO transferRequestDTO);
 }

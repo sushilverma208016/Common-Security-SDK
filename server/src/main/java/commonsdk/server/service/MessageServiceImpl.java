@@ -1,6 +1,7 @@
 package commonsdk.server.service;
 
 import commonsdk.server.dto.MessageDTO;
+import commonsdk.server.dto.TransferRequestDTO;
 import commonsdk.server.mapper.MessageMapper;
 import commonsdk.server.model.Message;
 import commonsdk.server.repository.MessageRepository;
@@ -56,5 +57,16 @@ public class MessageServiceImpl implements MessageService {
     @Override
     public void deleteMessage(Long id) {
         messageRepository.delete(id);
+    }
+
+    @Override
+    public Integer tranferMoney(TransferRequestDTO transferRequestDTO) {
+        Message fromAccount = messageRepository.findOne(Long.valueOf(transferRequestDTO.getFromAccount()));
+        Message toAccount = messageRepository.findOne(Long.valueOf(transferRequestDTO.getToAccount()));
+        fromAccount.setTotalbalance(fromAccount.getTotalbalance() - transferRequestDTO.getAmount());
+        toAccount.setTotalbalance(toAccount.getTotalbalance() + transferRequestDTO.getAmount());
+        messageRepository.save(fromAccount);
+        messageRepository.save(toAccount);
+        return fromAccount.getTotalbalance();
     }
 }
